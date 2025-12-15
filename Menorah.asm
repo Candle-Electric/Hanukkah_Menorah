@@ -1,0 +1,135 @@
+;=======================;
+; Hanukkah Menorah VMU	;
+;=======================;
+
+;=======================;
+;	Include Libraries	;
+;=======================;
+
+.include "./lib/sfr.i"
+
+;=======================;
+;   Define Variables:   ;
+;=======================;
+p3_pressed              =       $4      ; 1 Byte
+p3_last_input           =       $5      ; 1 Byte
+gs_bg_address           =       $7      ; 2 Bytes
+gs_anim_counter         =       $9      ; 1 Byte
+candles12_spr_address   =       $a      ; 2 Bytes
+candles34_spr_address   =       $c      ; 2 Bytes
+candle5_spr_address     =       $e      ; 2 Bytes
+candles67_spr_address   =       $10     ; 2 Bytes
+candles89_spr_address   =       $12     ; 2 Bytes
+
+;=======================;
+;       Constants       ;
+;=======================;
+T_BTN_SLEEP              equ     7
+T_BTN_MODE               equ     6
+T_BTN_B1				 equ	 5
+T_BTN_A1				 equ	 4
+T_BTN_RIGHT1             equ     3
+T_BTN_LEFT1              equ     2
+T_BTN_DOWN1              equ     1
+T_BTN_UP1                equ     0
+
+;=======================;
+;	Prepare Application	;
+;=======================;
+    .org	$00
+	jmpf	start
+
+	.org	$03
+	reti	
+
+	.org	$0b
+	reti	
+	
+	.org	$13
+	reti	
+
+	.org	$1b
+	jmpf	t1int
+	
+	.org	$23
+	reti	
+
+	.org	$2b
+	reti	
+	
+	.org	$33
+	reti	
+
+	.org	$3b
+	reti	
+
+	.org	$43
+	reti	
+
+	.org	$4b
+	clr1	p3int,0
+	clr1	p3int,1
+    reti
+
+;nop_irq:
+;	reti
+
+	.org	$130	
+t1int:
+	push	ie
+	clr1	ie,7
+	not1	ext,0
+	jmpf	t1int
+	pop	ie
+	reti
+
+	.org	$1f0
+
+goodbye:	
+	not1	ext,0
+	jmpf	goodbye
+
+
+;=======================;
+;VMU Application Header ;
+;=======================;
+.include "GameHeader.i"
+; Credits/Thanks:	
+	.org	$680
+    .byte   "Happy Hanukkah!!"
+    .byte   "Thanks To:      "
+    .byte   "Kresna Susila,  "
+    .byte   "4 LibPerspective"
+    .byte   "Walter Tetzner, "
+    .byte   "  For WaterBear,"
+    .byte   "Falco Girgis,   "
+    .byte   " For ElysianVMU,"
+    .byte   "Dmitry Grinberg,"
+    .byte   "    For VMU.PDF,"
+    .byte   "Marcus Comstedt,"
+    .byte   "   For Tetris.S,"
+    .byte   "Sebastian Mihai,"
+    .byte   "4 RainingSquares"
+    .byte   "Tyco, For Chao  "
+    .byte   "Editor VMI File,"
+    .byte   "Trent,          "
+    .byte   "Speud, For  VMU "
+    .byte   "Tool/DreamExplr,"
+    .byte   "RetroOnyx, For  "
+    .byte   "  Coder's Cable,"
+    .byte   "Cypress,Progrmng"
+    .byte   "Dude,TheCBarpsh,"
+    .byte   "  And Many More."
+    .byte   "And You,        "
+    .byte   "    For Playing!"
+    .byte   "HBD,+M.!GBRDDRAA"
+    
+;=======================;
+; Main program
+;=======================;
+
+start:
+
+Main_Loop:
+
+	.cnop	0,$200		; Pad To An Even Number Of Blocks
