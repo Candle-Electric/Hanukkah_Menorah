@@ -20,6 +20,7 @@ candles34_spr_address   =       $c      ; 2 Bytes
 candle5_spr_address     =       $e      ; 2 Bytes
 candles67_spr_address   =       $10     ; 2 Bytes
 candles89_spr_address   =       $12     ; 2 Bytes
+candles_lit             =       $14     ; 1 Byte
 
 ;=======================;
 ;       Constants       ;
@@ -129,7 +130,10 @@ goodbye:
 ;=======================;
 
 start:
-
+    mov #1, candles_lit
 Main_Loop:
 
 	.cnop	0,$200		; Pad To An Even Number Of Blocks
+    callf Get_Input
+    ld p3
+    inc candles_lit
