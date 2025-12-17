@@ -137,3 +137,9 @@ Main_Loop:
     callf Get_Input
     ld p3
     inc candles_lit
+.Draw_Candles
+    ld candles_lit
+    bz .Draw_Graphics
+    sub #2 
+    bp acc, 7, .Draw_Graphics
+.Draw_Graphics
