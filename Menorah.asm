@@ -21,7 +21,7 @@ candle5_spr_address     =       $e      ; 2 Bytes
 candles67_spr_address   =       $10     ; 2 Bytes
 candles89_spr_address   =       $12     ; 2 Bytes
 candles_lit             =       $14     ; 1 Byte
-
+Frame_Counter.          =.      $15 ; 16, 17, 18
 ;=======================;
 ;       Constants       ;
 ;=======================;
@@ -142,4 +142,11 @@ Main_Loop:
     bz .Draw_Graphics
     sub #2 
     bp acc, 7, .Draw_Graphics
+.Draw_Helper_Candle
+    .HC_1
+    bp frame_counter, 0,cHC_3 ; .Draw_Candles_12
+    mov #HelperCandle_0, spr_address
+.HC_2
+    bn frame_counter, 0, .DrHC_3
+    mov #HelperCandle_1, sprite_address
 .Draw_Graphics
