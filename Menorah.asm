@@ -150,3 +150,6 @@ Main_Loop:
     bn frame_counter, 0, .DrHC_3
     mov #HelperCandle_1, sprite_address
 .Draw_Graphics
+	mov #8, b
+	P_Draw_Sprite candles12_spr_address, b, c
+	P_Blit_Screen
