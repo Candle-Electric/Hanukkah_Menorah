@@ -143,12 +143,31 @@ Main_Loop:
     sub #2 
     bp acc, 7, .Draw_Graphics
 .Draw_Helper_Candle
-    .HC_1
+.HC_1
     bp frame_counter, 0,cHC_3 ; .Draw_Candles_12
-    mov #HelperCandle_0, spr_address
+    mov #<HelperCandle_0, candle5_spr_address
+	mov #>HelperCandle_0, candle5_spr_address+1
+	jmpf .Candles12_1
 .HC_2
     bn frame_counter, 0, .DrHC_3
     mov #HelperCandle_1, sprite_address
+.Candles12_1
+	ld candles_lit ; candles_count
+	sub #1
+	bz .Draw_Graphics
+	sub #1
+	bz .Draw_Candle1_Only
+	bp frame_counter, 0, .Candles12_2
+	mov #<Candles_Left_1, candles12_spr_address
+	mov #>Candles_Left_1, candles12_spr_address+1
+	jmpf .Candles34_1
+.Candles12_2
+.Candle1_Only
+	bp .frame_counter, 0, Candle1_Only_2
+	mov #<OneLeftCandle_1, candles12_spr_address
+	mov #>OneLeftCandle_1, candles12_spr_address+1
+.Candle1_Only_2
+.Candles34_1
 .Draw_Graphics
 	mov #8, b
 	P_Draw_Sprite candles12_spr_address, b, c
