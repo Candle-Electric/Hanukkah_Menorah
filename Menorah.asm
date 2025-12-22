@@ -134,7 +134,8 @@ start:
 Main_Loop:
 
 	.cnop	0,$200		; Pad To An Even Number Of Blocks
-    callf Get_Input
+.Get_Input    
+	callf Get_Input
     ld p3
     inc candles_lit
 .Draw_Candles
@@ -166,7 +167,9 @@ Main_Loop:
 	bp .frame_counter, 0, Candle1_Only_2
 	mov #<OneLeftCandle_1, candles12_spr_address
 	mov #>OneLeftCandle_1, candles12_spr_address+1
+	jmpf .Candles34_1
 .Candle1_Only_2
+
 .Candles34_1
 .Draw_Graphics
 	mov #8, b
