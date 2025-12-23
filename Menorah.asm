@@ -169,8 +169,14 @@ Main_Loop:
 	mov #>OneLeftCandle_1, candles12_spr_address+1
 	jmpf .Candles34_1
 .Candle1_Only_2
-
+	bp .frame_counter, 0, Candles34_1
+	mov #<OneLeftCandle_2, candles12_spr_address
+	mov #>OneLeftCandle_2, candles12_spr_address+1
+	jmpf .Candles34_1
 .Candles34_1
+	ld candles_lit
+	sub #3
+	bp acc, 7, .Draw_Candles34_Wicks
 .Draw_Graphics
 	mov #8, b
 	P_Draw_Sprite candles12_spr_address, b, c
