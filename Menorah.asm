@@ -179,5 +179,6 @@ Main_Loop:
 	bp acc, 7, .Draw_Candles34_Wicks
 .Draw_Graphics
 	mov #8, b
+	mov #8, c
 	P_Draw_Sprite candles12_spr_address, b, c
 	P_Blit_Screen
