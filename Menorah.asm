@@ -139,6 +139,7 @@ Main_Loop:
     ld p3
     inc candles_lit
 .Draw_Candles
+	P_Draw_Background_Constant Menorah_BG
     ld candles_lit
     bz .Draw_Graphics
     sub #2 
