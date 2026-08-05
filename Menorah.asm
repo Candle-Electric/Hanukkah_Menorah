@@ -152,7 +152,7 @@ Main_Loop:
 	jmpf .Candles12_1
 .HC_2
     bn frame_counter, 0, .DrHC_3
-    mov #HelperCandle_1, sprite_address
+    mov #HelperCandle_1, <sprite_address
 .Candles12_1
 	ld candles_lit ; candles_count
 	sub #1
