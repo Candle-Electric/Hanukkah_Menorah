@@ -182,4 +182,4 @@ Main_Loop:
 	mov #8, b
 	mov #8, c
 	P_Draw_Sprite candles12_spr_address, b, c
-	P_Blit_Screen
+	P_Blit_Screen ; jmpf Back To Main Loop?
