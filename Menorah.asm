@@ -3,38 +3,6 @@
 ;=======================;
 
 ;=======================;
-;	Include Libraries	;
-;=======================;
-
-.include "./lib/sfr.i"
-
-;=======================;
-;   Define Variables:   ;
-;=======================;
-p3_pressed              =       $4      ; 1 Byte
-p3_last_input           =       $5      ; 1 Byte
-gs_bg_address           =       $7      ; 2 Bytes
-gs_anim_counter         =       $9      ; 1 Byte
-candles12_spr_address   =       $a      ; 2 Bytes
-candles34_spr_address   =       $c      ; 2 Bytes
-candle5_spr_address     =       $e      ; 2 Bytes
-candles67_spr_address   =       $10     ; 2 Bytes
-candles89_spr_address   =       $12     ; 2 Bytes
-candles_lit             =       $14     ; 1 Byte
-Frame_Counter.          =.      $15 ; 16, 17, 18
-;=======================;
-;       Constants       ;
-;=======================;
-T_BTN_SLEEP              equ     7
-T_BTN_MODE               equ     6
-T_BTN_B1				 equ	 5
-T_BTN_A1				 equ	 4
-T_BTN_RIGHT1             equ     3
-T_BTN_LEFT1              equ     2
-T_BTN_DOWN1              equ     1
-T_BTN_UP1                equ     0
-
-;=======================;
 ;	Prepare Application	;
 ;=======================;
     .org	$00
@@ -89,6 +57,38 @@ t1int:
 goodbye:	
 	not1	ext,0
 	jmpf	goodbye
+
+;=======================;
+;	Include Libraries	;
+;=======================;
+
+.include "./lib/sfr.i"
+
+;=======================;
+;   Define Variables:   ;
+;=======================;
+p3_pressed              =       $4      ; 1 Byte
+p3_last_input           =       $5      ; 1 Byte
+gs_bg_address           =       $7      ; 2 Bytes
+gs_anim_counter         =       $9      ; 1 Byte
+candles12_spr_address   =       $a      ; 2 Bytes
+candles34_spr_address   =       $c      ; 2 Bytes
+candle5_spr_address     =       $e      ; 2 Bytes
+candles67_spr_address   =       $10     ; 2 Bytes
+candles89_spr_address   =       $12     ; 2 Bytes
+candles_lit             =       $14     ; 1 Byte
+Frame_Counter.          =.      $15 ; 16, 17, 18
+;=======================;
+;       Constants       ;
+;=======================;
+T_BTN_SLEEP              equ     7
+T_BTN_MODE               equ     6
+T_BTN_B1				 equ	 5
+T_BTN_A1				 equ	 4
+T_BTN_RIGHT1             equ     3
+T_BTN_LEFT1              equ     2
+T_BTN_DOWN1              equ     1
+T_BTN_UP1                equ     0
 
 
 ;=======================;
