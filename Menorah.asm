@@ -63,6 +63,7 @@ goodbye:
 ;=======================;
 
 .include "./lib/sfr.i"
+.include "./lib/libperspective.asm"
 
 ;=======================;
 ;   Define Variables:   ;
