@@ -78,7 +78,8 @@ candle5_spr_address     =       $e      ; 2 Bytes
 candles67_spr_address   =       $10     ; 2 Bytes
 candles89_spr_address   =       $12     ; 2 Bytes
 candles_lit             =       $14     ; 1 Byte
-Frame_Counter.          =.      $15 ; 16, 17, 18
+;Frame_Counter.         =.      $15 ; 16, 17, 18
+
 ;=======================;
 ;       Constants       ;
 ;=======================;
