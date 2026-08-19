@@ -187,4 +187,6 @@ Main_Loop:
 	P_Draw_Sprite candles12_spr_address, b, c
 	mov #16, b
 	; P_Draw..... "" "" ; Check If C Remains After Call To Kresna's P_Draw.
+	mov #24, b
+	P_Draw_Sprite candle5_spr_address, b, c
 	P_Blit_Screen ; jmpf Back To Main Loop?
