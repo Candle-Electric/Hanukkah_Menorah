@@ -194,4 +194,5 @@ Main_Loop:
 	; P_Draw_Sprite candles67_spr_address, b, c
 	mov #40, b 
 	mov #8, c ; Also Move C Back.
+	P_Draw_Sprite candles_89_spr_address, b, c
 	P_Blit_Screen ; jmpf Back To Main Loop?
