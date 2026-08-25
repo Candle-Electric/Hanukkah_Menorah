@@ -181,6 +181,7 @@ Main_Loop:
 	ld candles_lit
 	sub #3
 	bp acc, 7, .Draw_Candles34_Wicks
+.Draw_Candles34_Wicks
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
@@ -196,3 +197,4 @@ Main_Loop:
 	mov #8, c ; Also Move C Back.
 	P_Draw_Sprite candles_89_spr_address, b, c
 	P_Blit_Screen ; jmpf Back To Main Loop?
+	jmpf
