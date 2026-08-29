@@ -187,7 +187,7 @@ Main_Loop:
 	mov #8, c
 	P_Draw_Sprite candles12_spr_address, b, c
 	mov #16, b
-	; P_Draw..... "" "" ; Check If C Remains After Call To Kresna's P_Draw.
+	P_Draw_Sprite candles34_spr_address, b, c ; P_Draw..... "" "" ; Check If C Remains After Call To Kresna's P_Draw.
 	mov #24, b
 	; Move C,D,R Up For Candle #5.
 	P_Draw_Sprite candle5_spr_address, b, c 
