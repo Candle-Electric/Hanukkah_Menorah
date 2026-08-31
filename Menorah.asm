@@ -192,9 +192,9 @@ Main_Loop:
 	; Move C,D,R Up For Candle #5.
 	P_Draw_Sprite candle5_spr_address, b, c 
 	mov #32, b
+	mov #8, c ; Also, Move C Back.
 	P_Draw_Sprite candles67_spr_address, b, c
 	mov #40, b 
-	mov #8, c ; Also, Move C Back.
 	P_Draw_Sprite candles_89_spr_address, b, c
 	P_Blit_Screen ; jmpf Back To Main Loop?
 	jmpf
