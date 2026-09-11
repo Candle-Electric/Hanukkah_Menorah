@@ -195,6 +195,7 @@ Main_Loop:
 	ld candles_lit
 	sub #6
 	bn acc, 7, .Draw_Candles_89
+.Candle6Lit+7Wicks
 	;...
 	sub #7 ; / *-1+
 .Draw_Graphics
