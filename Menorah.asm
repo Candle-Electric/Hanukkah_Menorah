@@ -198,6 +198,7 @@ Main_Loop:
 .Candle6Lit+7Wicks
 	;...
 	sub #7 ; / *-1+
+.Candles67_Both
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
