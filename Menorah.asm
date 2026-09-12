@@ -181,6 +181,8 @@ Main_Loop:
 	ld candles_lit
 	sub #3
 	bp acc, 7, .Draw_Candles34_Wicks
+.Candles34_2
+	jmpf .Draw_Candle_5
 .Draw_Candles34_Wicks
 	ld candles_lit
 	sub #3
