@@ -201,6 +201,8 @@ Main_Loop:
 	;...
 	sub #7 ; / *-1+
 .Candles67_Both
+	ld candles_lit
+	sub #7
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
