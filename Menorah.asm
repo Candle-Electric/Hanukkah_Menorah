@@ -206,6 +206,7 @@ Main_Loop:
 	bn acc, 7, .Draw_Candles_89
 .Draw_Candles_89
     ld candles_lit
+	sub #8
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
