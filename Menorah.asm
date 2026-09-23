@@ -209,6 +209,7 @@ Main_Loop:
 	sub #8
 	bn acc, 7, . DrawCandles_89_Wicks
 	mov #<Candles89_Wicks, Candles89_Sprite_Address
+	mov #>Candles89_Wicks, Candles89_Sprite_Address+1
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
