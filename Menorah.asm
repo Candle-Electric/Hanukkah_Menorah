@@ -213,7 +213,7 @@ Main_Loop:
 .Candle_8_Lit
 	ld candles_lit
 	sub #9
-	bn acc, 7, .Draw
+	bn acc, 7, .Draw_Candles89_Both
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
