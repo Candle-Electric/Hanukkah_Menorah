@@ -215,6 +215,7 @@ Main_Loop:
 	sub #9
 	bn acc, 7, .Draw_Candles89_Both
 	mov #<Candle8_Lit, Candles89_Sprite_Address
+	mov #>Candle8_Lit, Candles89_Sprite_Address+1
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
