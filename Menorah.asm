@@ -218,6 +218,8 @@ Main_Loop:
 	mov #>Candle8_Lit, Candles89_Sprite_Address+1
 .Candles_89_Both
 	ld candles_lit
+	sub #9
+	bnz .Draw_Graphics
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
