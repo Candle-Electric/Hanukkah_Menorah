@@ -220,6 +220,7 @@ Main_Loop:
 	ld candles_lit
 	sub #9
 	bnz .Draw_Graphics
+	mov #<Candles89_Lit
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
