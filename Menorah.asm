@@ -221,6 +221,7 @@ Main_Loop:
 	sub #9
 	bnz .Draw_Graphics
 	mov #<Candles89_Lit, Candles89_Sprite_Address
+	mov #>Candles89_Lit, Candles89_Sprite_Address
 .Draw_Graphics
 	mov #8, b
 	mov #8, c
