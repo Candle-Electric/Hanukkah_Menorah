@@ -237,4 +237,4 @@ Main_Loop:
 	mov #40, b 
 	P_Draw_Sprite candles_89_spr_address, b, c
 	P_Blit_Screen ; jmpf Back To Main Loop?
-	jmpf
+	jmpf Main_Oop ; ?
