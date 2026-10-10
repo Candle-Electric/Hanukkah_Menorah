@@ -200,6 +200,7 @@ Main_Loop:
 .Candle6Lit+7Wicks
 	;...
 	sub #7 ; / *-1+
+	ld candles_lit
 .Candles67_Both
 	ld candles_lit
 	sub #7
