@@ -201,6 +201,9 @@ Main_Loop:
 	;...
 	sub #7 ; / *-1+
 	ld candles_lit
+	sub #6
+	bn acc, 7, .Draw_Candle_6_Lit
+	add #7
 .Candles67_Both
 	ld candles_lit
 	sub #7
