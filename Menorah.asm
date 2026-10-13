@@ -206,6 +206,8 @@ Main_Loop:
 	add #7
 .Draw_Candle_6_Lit
 	ld candles_lit
+	sub #7
+	bn acc, 7, .Candles67_Both
 .Candles67_Both
 	ld candles_lit
 	sub #7
