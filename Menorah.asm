@@ -208,7 +208,9 @@ Main_Loop:
 	ld candles_lit
 	sub #7
 	bn acc, 7, .Candles67_Both
+	mov #<Candle6_Lit, Candles67_Sprite_Address
     mov #>Candle6_Lit, Candles67_Sprite_Address+1
+	jmpf .Draw_Candles_89
 .Candles67_Both
 	ld candles_lit
 	sub #7
