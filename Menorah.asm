@@ -195,7 +195,7 @@ Main_Loop:
 	ld candles_lit
     sub #5
     bn acc, 7, .Draw_Candles_67
-	mov #<
+	mov #<Candle_
 	mov #>
 .Draw_Candles_67
 	ld candles_lit
