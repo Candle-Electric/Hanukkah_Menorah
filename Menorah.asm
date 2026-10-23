@@ -184,6 +184,7 @@ Main_Loop:
 	mov #<>
 	jmpf .Draw_Candle_5
 .Candles34_2
+	ld candles_lit
 	jmpf .Draw_Candle_5
 .Draw_Candles34_Wicks
 	ld candles_lit
