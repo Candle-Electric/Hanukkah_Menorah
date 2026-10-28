@@ -195,6 +195,7 @@ Main_Loop:
 	bn acc, 7, .Draw_Candle_5
 	mov #<Candles34_Normal, candles34_spr_address ; Or Keep The Same?
 	mov #>Candles_Left_1, candles34_spr_address ; ... In That they'd Be Instantiated With this Already? Might Need To Do it Before Blit Each Frame, THough.
+.Draw_Candles34_Both
 .Draw_Candle_5
 	ld candles_lit
     sub #5
