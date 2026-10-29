@@ -169,6 +169,7 @@ Main_Loop:
 	bn frame_Counter, 1, .Candle1_Only
 	mov #<Candles_Left_2
 	mov #>Candles_Left_2
+    jmpf
 .Candle1_Only
 	bp .frame_counter, 0, Candle1_Only_2
 	mov #<OneLeftCandle_1, candles12_spr_address
