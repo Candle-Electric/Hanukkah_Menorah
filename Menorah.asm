@@ -181,7 +181,7 @@ Main_Loop:
 	mov #>OneLeftCandle_2, candles12_spr_address+1
 	jmpf .Candles34_1
 .Candles12_Both_1
-
+	bp .frame)counter, 0
 .Candles34_1
 	ld candles_lit
 	sub #3
