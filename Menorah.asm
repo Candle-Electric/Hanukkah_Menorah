@@ -182,6 +182,9 @@ Main_Loop:
 	jmpf .Candles34_1
 .Candles12_Both_1
 	bp .frame)counter, 0
+	mov #<Candles12Both_1
+...Both_2
+	mov #<Candles12Both_2
 .Candles34_1
 	ld candles_lit
 	sub #3
