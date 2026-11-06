@@ -184,7 +184,7 @@ Main_Loop:
 	bp .frame)counter, 0
 	mov #<Candles12Both_1
 ...Both_2
-	mov #<Candles12Both_2
+	mov #<Candles12Both_2, candles12_spr_address
 .Candles34_1
 	ld candles_lit
 	sub #3
