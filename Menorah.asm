@@ -183,6 +183,7 @@ Main_Loop:
 .Candles12_Both_1
 	bp .frame)counter, 0
 	mov #<Candles12Both_1, candles12_spr_address
+	jmpf .Candles34_1
 ...Both_2
 	mov #<Candles12Both_2, candles12_spr_address
 .Candles34_1
