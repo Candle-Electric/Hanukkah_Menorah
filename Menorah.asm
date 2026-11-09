@@ -186,6 +186,7 @@ Main_Loop:
 	jmpf .Candles34_1
 ...Both_2
 	mov #<Candles12Both_2, candles12_spr_address
+	mov #>Candles12Both_2, candles12_spr_address+1
 .Candles34_1
 	ld candles_lit
 	sub #3
