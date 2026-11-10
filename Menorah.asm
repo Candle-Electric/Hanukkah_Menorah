@@ -185,6 +185,7 @@ Main_Loop:
 	mov #<Candles12Both_1, candles12_spr_address
 	jmpf .Candles34_1
 ...Both_2
+	bp .frame_counter, 0, .Candles34_1
 	mov #<Candles12Both_2, candles12_spr_address
 	mov #>Candles12Both_2, candles12_spr_address+1
 .Candles34_1
