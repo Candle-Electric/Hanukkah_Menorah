@@ -167,8 +167,8 @@ Main_Loop:
 	jmpf .Candles34_1
 .Candles12_2
 	bn frame_Counter, 1, .Candle1_Only
-	mov #<Candles_Left_2
-	mov #>Candles_Left_2
+	mov #<Candles_Left_2, candles12_spr_address
+	mov #>Candles_Left_2, +1
     jmpf
 .Candle1_Only
 	bp .frame_counter, 0, Candle1_Only_2
