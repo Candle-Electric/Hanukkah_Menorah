@@ -208,7 +208,7 @@ Main_Loop:
 .Draw_Candles34_Both
 	ld candles_lit
 	ld frame_number ; bp
-    mov #<Candles34_Both_0,
+    mov #<Candles34_Both_0, candles34_Spr_Address
     mov #>Candles34_Both_1,
 .Draw_Candle_5
 	ld candles_lit
