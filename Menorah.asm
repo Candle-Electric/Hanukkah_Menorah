@@ -214,7 +214,7 @@ Main_Loop:
 	ld candles_lit
     sub #5
     bn acc, 7, .Draw_Candles_67
-	mov #<Candle_5/0lir=t`1
+	mov #<Candle_5/0lir=t`1, Candle5_Spr_Address
 	mov #>Candle_5, 
 .Draw_Candles_67
 	ld candles_lit
