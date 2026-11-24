@@ -193,7 +193,7 @@ Main_Loop:
 	sub #3
 	bp acc, 7, .Draw_Candles34_Wicks
 	mov #<OneleftCandle_1, candles34_spr_address
-	mov #>, +1
+	mov #>OneleftCandle_2, +1
 	jmpf .Draw_Candle_5
 .Candles34_2
 	bp Animation_Frame
