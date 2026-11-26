@@ -209,7 +209,7 @@ Main_Loop:
 	ld candles_lit
 	ld frame_number ; bp
     mov #<Candles34_Both_0, candles34_Spr_Address
-    mov #>Candles34_Both_1,
+    mov #>Candles34_Both_1, candles34_Spr_Address+1 ; Just "Candles Both," Since Slots Can Share Graphics.
 .Draw_Candle_5
 	ld candles_lit
     sub #5
