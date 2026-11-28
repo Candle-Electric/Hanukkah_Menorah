@@ -198,6 +198,7 @@ Main_Loop:
 .Candles34_2
 	bp Animation_Frame
 	ld candles_lit ; we've only Branched here if we've already checked the Candle #, so since this is for Animation Frames only, we could Comment.
+	mov <#OneLeftCandle_2, Candles34_Spr_Address
 	jmpf .Draw_Candle_5
 .Draw_Candles34_Wicks
 	ld candles_lit
